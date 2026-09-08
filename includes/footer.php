@@ -1,6 +1,6 @@
  <footer>
         <a href="/index.php">
-            <img src="/assets/img/logo.jpg" alt="jeton aux couleurs de l'aquarium, bleu et blanc, avec un poisson au premier plan">
+            <img src="/assets/img/logo.jpg" class= "logo" alt="jeton aux couleurs de l'aquarium, bleu et blanc, avec un poisson au premier plan">
             <span>Les Jardins de Nérée</span>
             <span>Une promenade dans les mondes marins, à Néréapolis.</span>
         </a>
