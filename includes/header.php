@@ -10,29 +10,30 @@
 
 <body>
     <header>
-        <nav class="conteneur" aria-label="Navigation principale">
-        <?php $page = basename($_SERVER['SCRIPT_NAME']); ?>
-        <?php $liens = [
-                'billetterie.php' => 'Billetterie',
-                'animaux.php' => 'Nos animaux',
-                'infos-pratiques.php' => 'Informations pratiques',
-            ];?>
-            <a href="/index.php">
-                <div class="marque">
-                    <img src="/assets/img/logo.jpg" class="logo" alt="jeton aux couleurs de l'aquarium, bleu et blanc, avec un poisson au premier plan">
-                    <div class="marque-texte">
-                        <span class="marque-nom">Les Jardins de Nérée</span>
-                        <span class="marque-baseline">Une promenade dans les mondes marins</span>
+        <main>
+            <nav class="conteneur" aria-label="Navigation principale">
+            <?php $page = basename($_SERVER['SCRIPT_NAME']); ?>
+            <?php $liens = [
+                    'billetterie.php' => 'Billetterie',
+                    'animaux.php' => 'Nos animaux',
+                    'infos-pratiques.php' => 'Informations pratiques',
+                ];?>
+                <a href="/index.php">
+                    <div class="marque">
+                        <img src="/assets/img/logo.jpg" class="logo" alt="jeton aux couleurs de l'aquarium, bleu et blanc, avec un poisson au premier plan">
+                        <div class="marque-texte">
+                            <span class="marque-nom">Les Jardins de Nérée</span>
+                            <span class="marque-baseline">Une promenade dans les mondes marins</span>
+                        </div>
                     </div>
+                </a>
+                <div class="nav-liens">
+                    <?php foreach ($liens as $fichier => $libelle): ?>
+                        <a href="/<?= $fichier ?>" <?= $page === $fichier ? 'aria-current="page"' : '' ?>><?= htmlspecialchars($libelle) ?></a>
+                    <?php endforeach; ?>
+                    <a href="/billetterie.php" class="nav-btn">Réserver</a>
                 </div>
-            </a>
-            <div class="nav-liens">
-                <?php foreach ($liens as $fichier => $libelle): ?>
-                    <a href="/<?= $fichier ?>" <?= $page === $fichier ? 'aria-current="page"' : '' ?>><?= htmlspecialchars($libelle) ?></a>
-                <?php endforeach; ?>
-                <a href="/billetterie.php" class="nav-btn">Réserver</a>
-            </div>
-        </nav>
+            </nav>
     </header>
     
             
