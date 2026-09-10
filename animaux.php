@@ -2,7 +2,7 @@
 require_once __DIR__ . '/src/Autoloader.php';
 Autoloader::register();
 
-$titre = 'Animaux';
+$titre = 'Nos animaux';
 require __DIR__ . '/includes/header.php';
 ?>
 
