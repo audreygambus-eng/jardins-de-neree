@@ -1,10 +1,10 @@
-INSERT INTO tarif (libelle, prix, description, compte_visite, compte_vr) VALUES
-('Billet adulte (18 ans et plus)', 15.00, 'Pour une visite d''une heure de l''aquarium', 1, 0),
-('Billet enfant (de 4 à 18 ans)', 10.00, 'Pour une visite d''une heure de l''aquarium', 1, 0),
-('Billet réduction (étudiants, demandeurs d''emplois, etc)', 12.00, 'Pour une visite d''une heure de l''aquarium * Un justificatif de votre situation vous sera demandé au moment de valider vos billets', 1, 0),
-('Billet groupe (à partir de 6 personnes)', 12.00, 'Pour une visite d''une heure de l''aquarium', 1, 0),
-('Billet VR seule', 8.00, 'Pour une activité VR de 30 minutes sans la visite d''une heure', 0, 1),
-('Billet VR + visite', 20.00, 'Pour une activité VR de 30 minutes avec la visite d''une heure', 1, 1)
+INSERT INTO tarif (libelle, prix, description, image, compte_visite, compte_vr) VALUES
+('Billet adulte (18 ans et plus)', 15.00, 'Pour une visite d''une heure de l''aquarium', 'dauphin-adulte.jpg', 1, 0),
+('Billet enfant (de 4 à 18 ans)', 10.00, 'Pour une visite d''une heure de l''aquarium', 'dauphin-enfant.jpg', 1, 0),
+('Billet réduction (étudiants, demandeurs d''emplois, etc)', 12.00, 'Pour une visite d''une heure de l''aquarium * Un justificatif de votre situation vous sera demandé au moment de valider vos billets', 'dauphin-reduction.jpg', 1, 0),
+('Billet groupe (à partir de 6 personnes)', 12.00, 'Pour une visite d''une heure de l''aquarium', 'dauphin-famille.jpg', 1, 0),
+('Billet VR seule', 8.00, 'Pour une activité VR de 30 minutes sans la visite d''une heure', 'vr-billet.jpg', 0, 1),
+('Billet VR + visite', 20.00, 'Pour une activité VR de 30 minutes avec la visite d''une heure', 'vr-billet.jpg', 1, 1)
 ;
 
 INSERT INTO creneau (date_heure, capacite_visite, capacite_vr) VALUES

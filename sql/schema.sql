@@ -9,6 +9,7 @@ CREATE TABLE tarif (
     libelle             VARCHAR(80) NOT NULL,
     prix                DECIMAL(6,2) NOT NULL,
     description         VARCHAR(255),
+    image               VARCHAR(120),
     compte_visite       TINYINT(1) NOT NULL DEFAULT 0,
     compte_vr           TINYINT(1) NOT NULL DEFAULT 0
 )
