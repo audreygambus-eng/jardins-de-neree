@@ -37,35 +37,59 @@ require __DIR__ . '/includes/header.php';
         <p>Pour profiter pleinement de votre visite et garantir vos places, nous vous recommandons de réserver vos billets en ligne à l'avance.</p>
         <p>Avant de venir, pensez également à consulter nos <a href="/infos-pratiques.php">informations pratiques</a>.</p>
     </section>
-    <div class="tarifs">
-        <?php foreach ($tarifs as $tarif) : ?>
-            <article class="tarif">
-                <?php if (!empty($tarif['image'])): ?>
-                    <img src="/assets/img/<?= htmlspecialchars($tarif['image']) ?>" alt="">
-                <?php endif; ?>
-                <h3><?= htmlspecialchars($tarif['libelle']) ?></h3>
-                <p><?= htmlspecialchars($tarif['description']) ?></p>
-                <p><?= number_format((float) $tarif['prix'], 2, ',', ' ') ?> €</p>
-            </article>
-        <?php endforeach; ?>
-    </div>
-    <section class="creneaux">
-        <h2>Choisissez votre créneau</h2>
-        <?php foreach ($parJour as $jour => $creneauxDuJour): ?>
-            <section class="jour">
-                <h3><?= dateFr($jour, $jours, $mois) ?></h3>
-                <?php foreach ($creneauxDuJour as $creneau): ?>
-                    <?php $complet = $creneau['places_visite'] <= 0; ?>
-                    <label class="creneau <?= $complet ? 'creneau--complet' : '' ?>">
-                        <input type="radio" name="creneau_id" value="<?= $creneau['id'] ?>" <?= $complet ? 'disabled' : '' ?>>
-                        <span class="creneau-heure"><?= date('H\hi', strtotime($creneau['date_heure'])) ?></span>
-                        <span class="creneau-places"><?= $creneau['places_visite'] ?> places</span>
-                        <span class="creneau-casques"><?= $creneau['places_vr'] ?> casques</span>
+
+    <form method="post" action="/reserver-traitement.php">
+
+        <div class="tarifs">
+            <?php foreach ($tarifs as $tarif) : ?>
+                <article class="tarif">
+                    <?php if (!empty($tarif['image'])): ?>
+                        <img src="/assets/img/<?= htmlspecialchars($tarif['image']) ?>" alt="">
+                    <?php endif; ?>
+                    <h3><?= htmlspecialchars($tarif['libelle']) ?></h3>
+                    <p><?= htmlspecialchars($tarif['description']) ?></p>
+                    <p><?= number_format((float) $tarif['prix'], 2, ',', ' ') ?> €</p>
+                    <label>
+                        Quantité
+                        <select name="quantites[<?= $tarif['id'] ?>]">
+                            <?php for ($i = 0; $i <= 10; $i++): ?>
+                                <option value="<?= $i ?>"><?= $i ?></option>
+                            <?php endfor; ?>
+                        </select>
                     </label>
-                <?php endforeach; ?>
-            </section>
-        <?php endforeach; ?>
-    </section>
+                </article>
+            <?php endforeach; ?>
+        </div>
+        <section class="creneaux">
+            <h2>Choisissez votre créneau</h2>
+            <?php foreach ($parJour as $jour => $creneauxDuJour): ?>
+                <section class="jour">
+                    <h3><?= dateFr($jour, $jours, $mois) ?></h3>
+                    <?php foreach ($creneauxDuJour as $creneau): ?>
+                        <?php $complet = $creneau['places_visite'] <= 0; ?>
+                        <label class="creneau <?= $complet ? 'creneau--complet' : '' ?>">
+                            <input type="radio" name="creneau_id" value="<?= $creneau['id'] ?>" <?= $complet ? 'disabled' : '' ?>>
+                            <span class="creneau-heure"><?= date('H\hi', strtotime($creneau['date_heure'])) ?></span>
+                            <span class="creneau-places"><?= $creneau['places_visite'] ?> places</span>
+                            <span class="creneau-casques"><?= $creneau['places_vr'] ?> casques</span>
+                        </label>
+                    <?php endforeach; ?>
+                </section>
+            <?php endforeach; ?>
+        </section>
+        <section class="coordonnees">
+            <h2>Vos coordonnées</h2>
+            <label>
+                Nom
+                <input type="text" name="nom" required maxlength="100">
+            </label>
+            <label>
+                E-mail
+                <input type="email" name="email" required maxlength="255">
+            </label>
+        </section>
+        <button type="submit" class="btn">Valider ma réservation</button>
+    </form>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>
