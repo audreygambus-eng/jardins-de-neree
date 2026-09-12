@@ -9,8 +9,11 @@ CREATE TABLE tarif (
     libelle             VARCHAR(80) NOT NULL,
     prix                DECIMAL(6,2) NOT NULL,
     description         VARCHAR(255),
+    mention             VARCHAR(255),
+    image               VARCHAR(120),
     compte_visite       TINYINT(1) NOT NULL DEFAULT 0,
-    compte_vr           TINYINT(1) NOT NULL DEFAULT 0
+    compte_vr           TINYINT(1) NOT NULL DEFAULT 0,
+    quantite_min        TINYINT UNSIGNED NOT NULL DEFAULT 1
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
