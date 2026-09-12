@@ -23,3 +23,7 @@ INSERT INTO creneau (date_heure, capacite_visite, capacite_vr) VALUES
 ('2026-09-13 16:00:00', 55, 7),
 ('2026-09-13 17:00:00', 60, 10)
 ;
+
+INSERT INTO utilisateur (email, mot_de_passe, role) VALUES
+('admin@jardinsdeneree.fr', '$2y$10$w88eYcRnVoBY2u8d2aLFl.xeWRXkRdnKTyily3L1BKC25fs0fVufK', 'ROLE_ADMIN'),
+('guichet@jardinsdeneree.fr','$2y$10$mYFC0cutR5WcrmMg8IzfiOqZaJLnoadYu.kpisGZjrxTnnfL9i7k6', 'ROLE_EMPLOYE');
