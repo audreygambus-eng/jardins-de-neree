@@ -70,7 +70,7 @@ if ($creneauId === 0) {
 if (!empty($erreurs)) {
     $_SESSION['erreurs'] = $erreurs;
     $_SESSION['ancien'] = $_POST;
-    header('Location: /billetterie.php');
+    header('Location: /billetterie.php#erreurs');
     exit;
 }
 
