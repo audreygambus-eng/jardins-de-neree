@@ -487,3 +487,23 @@ footer h3 {
         gap: 32px;
     }
 }
+
+@media print {
+    header,
+    footer,
+    .no-print {
+        display: none;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    .corps-billet,
+    .entete-billet {
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+    }
+}

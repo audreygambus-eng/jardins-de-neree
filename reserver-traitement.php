@@ -27,10 +27,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $erreurs[] = "L'adresse e-mail n'est pas valide.";
 }
 
-if ($creneauId === 0) {
-    $erreurs[] = 'Veuillez choisir un créneau.';
-}
-
 if ($totalBillets <= 0) {
     $erreurs[] = 'Veuillez sélectionner au moins un billet.';
 }
@@ -44,26 +40,30 @@ foreach ($tarifs as $tarif) {
     }
 }
 
-$creneau = Creneau::findById($creneauId);
-
-if ($creneau === null) {
-    $erreurs[] = "Le créneau choisi n'est plus disponible.";
+if ($creneauId === 0) {
+    $erreurs[] = 'Veuillez choisir un créneau.';
 } else {
-    $placesDemandees = 0;
-    $casquesDemandes = 0;
+    $creneau = Creneau::findById($creneauId);
 
-    foreach ($tarifs as $tarif) {
-        $q = $quantites[$tarif['id']] ?? 0;
-        $placesDemandees += $q * $tarif['compte_visite'];
-        $casquesDemandes += $q * $tarif['compte_vr'];
-    }
+    if ($creneau === null) {
+        $erreurs[] = "Le créneau choisi n'est plus disponible.";
+    } else {
+        $placesDemandees = 0;
+        $casquesDemandes = 0;
 
-    if ($placesDemandees > $creneau['places_visite']) {
-        $erreurs[] = "Il ne reste que {$creneau['places_visite']} places sur ce créneau.";
-    }
+        foreach ($tarifs as $tarif) {
+            $q = $quantites[$tarif['id']] ?? 0;
+            $placesDemandees += $q * $tarif['compte_visite'];
+            $casquesDemandes += $q * $tarif['compte_vr'];
+        }
 
-    if ($casquesDemandes > $creneau['places_vr']) {
-        $erreurs[] = "Il ne reste que {$creneau['places_vr']} casques VR sur ce créneau.";
+        if ($placesDemandees > $creneau['places_visite']) {
+            $erreurs[] = "Il ne reste que {$creneau['places_visite']} places sur ce créneau.";
+        }
+
+        if ($casquesDemandes > $creneau['places_vr']) {
+            $erreurs[] = "Il ne reste que {$creneau['places_vr']} casques VR sur ce créneau.";
+        }
     }
 }
 

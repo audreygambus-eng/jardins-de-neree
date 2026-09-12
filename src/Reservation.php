@@ -52,4 +52,34 @@ class Reservation
         }
             
     }
+
+    public static function findByReference(string $reference): ?array
+    {
+        $pdo = Database::getInstance();
+        $sql = 'SELECT r.reference, r.nom, r.email, r.date_reservation, c.date_heure
+                FROM reservation r
+                JOIN creneau c ON c.id = r.creneau_id
+                WHERE r.reference = :reference';
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['reference' => $reference]);
+
+        return $stmt->fetch() ?: null;
+    }
+
+    public static function findDetail(string $reference): array
+    {
+        $pdo = Database::getInstance();
+        $sql = 'SELECT t.libelle, rt.quantite, t.prix
+                FROM reservation r
+                JOIN reservation_tarif rt ON rt.reservation_id = r.id
+                JOIN tarif t ON t.id = rt.tarif_id
+                WHERE r.reference = :reference
+                ORDER BY t.id';
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['reference' => $reference]);
+
+        return $stmt->fetchAll();
+    }
 }
