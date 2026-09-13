@@ -9,7 +9,7 @@ $titre = 'Tableau de bord';
 require __DIR__ . '/../includes/header.php';
 ?>
 
-<main>
+<main class="admin-page">
     <h1>Tableau de bord</h1>
     <p>Connecté en tant que <?= htmlspecialchars(Auth::utilisateur()['email']) ?></p>
 

@@ -82,4 +82,23 @@ class Reservation
 
         return $stmt->fetchAll();
     }
+
+    public static function rechercher(string $terme): array
+    {
+        $pdo = Database::getInstance();
+        $sql = 'SELECT r.reference, r.nom, r.email, c.date_heure
+                FROM reservation r
+                JOIN creneau c ON c.id = r.creneau_id
+                WHERE r.nom LIKE :terme_nom
+                    OR r.email LIKE :terme_email
+                ORDER BY c.date_heure DESC';
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'terme_nom' => '%' . $terme . '%',
+            'terme_email' => '%' . $terme . '%',
+        ]);
+
+        return $stmt->fetchAll();
+    }
 }
