@@ -636,12 +636,32 @@ tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
+.espace {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.actions {
+    text-decoration: underline;
+}
+
 /* Composants */
 
 .btn {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 15px;
+}
+
+.btn-plein {
+     background-color: var(--accent);
+    color: var(--fond-nav);
+    align-self: flex-start;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .logo {
