@@ -37,6 +37,12 @@
                     <li><a href="#">CGV</a></li>
                     <li><a href="#">Mentions légales</a></li>
                     <li><a href="#">Accessibilité</a></li>
+                    <?php if (Auth::estConnecte()): ?>
+                        <li><a href="/admin/index.php">Mon espace</a></li>
+                        <li><a href="/deconnexion.php">Se déconnecter</a></li>
+                    <?php else: ?>
+                        <li><a href="/connexion.php">Connexion</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

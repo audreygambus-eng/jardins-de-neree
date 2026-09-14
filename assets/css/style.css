@@ -577,12 +577,91 @@ footer h3 {
     justify-self: center;
 }
 
+/* Admin */
+
+.form-recherche {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 24px 0;
+}
+
+.form-recherche label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-recherche input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-family: inherit;
+}
+
+.form-recherche .btn {
+    align-self: flex-start;
+    background-color: var(--accent);
+    color: var(--fond-nav);
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.admin-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--texte-attenue);
+}
+
+th {
+    color: var(--accent);
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.espace {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.actions {
+    text-decoration: underline;
+}
+
 /* Composants */
 
 .btn {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 15px;
+}
+
+.btn-plein {
+     background-color: var(--accent);
+    color: var(--fond-nav);
+    align-self: flex-start;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .logo {

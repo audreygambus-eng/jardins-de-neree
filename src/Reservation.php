@@ -82,4 +82,40 @@ class Reservation
 
         return $stmt->fetchAll();
     }
+
+    public static function rechercher(string $terme): array
+    {
+        $pdo = Database::getInstance();
+        $sql = 'SELECT r.reference, r.nom, r.email, c.date_heure
+                FROM reservation r
+                JOIN creneau c ON c.id = r.creneau_id
+                WHERE r.nom LIKE :terme_nom
+                    OR r.email LIKE :terme_email
+                ORDER BY c.date_heure DESC';
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'terme_nom' => '%' . $terme . '%',
+            'terme_email' => '%' . $terme . '%',
+        ]);
+
+        return $stmt->fetchAll();
+    }
+
+    public static function findParCreneau(int $creneauId): array
+    {
+        $pdo = Database::getInstance();
+        $sql = 'SELECT r.reference, r.nom, r.email,
+                        COALESCE(SUM(rt.quantite), 0) AS nb_billets
+                FROM reservation r
+                LEFT JOIN reservation_tarif rt ON rt.reservation_id = r.id
+                WHERE r.creneau_id = :creneau_id
+                GROUP BY r.id
+                ORDER BY r.date_reservation';
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['creneau_id' => $creneauId]);
+
+        return $stmt->fetchAll();
+    }
 }

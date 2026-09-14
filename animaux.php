@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__ . '/src/Autoloader.php';
-Autoloader::register();
+require_once __DIR__ . '/config.php';
 
 $titre = 'Nos animaux';
 require __DIR__ . '/includes/header.php';
