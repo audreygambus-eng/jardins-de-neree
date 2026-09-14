@@ -36,6 +36,7 @@ a {
     --accent: #00B2FF;
     --texte-attenue: #8FB0C8;
     --texte-clair: #C6DCEC;
+    --fond-pur: #ffffff;
 
     /* Typographie */
 
@@ -204,7 +205,7 @@ footer h2 {
 }
 
 .carte {
-    background-color: #fff;
+    background-color:var(--fond-pur);
     border-radius: 12px;
     overflow: hidden;
 }
@@ -553,7 +554,7 @@ footer h2 {
     background-color: #7A1420;
     border-left: 4px solid #FF5C6C;
     border-radius: 8px;
-    color: #fff;
+    color: var(--fond-pur);
 }
 
 .erreurs li {
@@ -668,6 +669,36 @@ tbody tr:hover {
 
 .actions {
     text-decoration: underline;
+}
+
+/* Accessibilite */
+
+.page-texte {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 890px;
+    padding: 40px 24px;
+    gap: 32px;
+}
+
+.themes-accessibilite {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.themes-accessibilite h2 {
+    color: var(--accent);
+}
+
+.themes-accessibilite h3 {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.themes-accessibilite span {
+    color:var(--fond-pur);
 }
 
 /* Composants */
@@ -812,13 +843,13 @@ tbody tr:hover {
     }
 
     body {
-        background: #fff;
+        background: var(--fond-pur);
         color: #000;
     }
 
     .corps-billet,
     .entete-billet {
-        background: #fff;
+        background:var(--fond-pur);
         color: #000;
         border: 1px solid #000;
     }
