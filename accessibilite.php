@@ -62,6 +62,9 @@ require __DIR__ . '/includes/header.php';
             <li>Nos animaux</li>
             <li>Informations pratiques</li>
             <li>Confirmation de réservation</li>
+            <li>Accessibilité</li>
+            <li>Mentions légales</li>
+            <li>CVG</li>
         </ul>
     </section>
 

@@ -701,6 +701,60 @@ tbody tr:hover {
     color:var(--fond-pur);
 }
 
+/* Mentions légales */
+
+.texte-mentions {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 890px;
+    padding: 40px 24px;
+    gap: 32px;
+}
+
+.texte-mentions h2 {
+    color: var(--accent);
+}
+.mentions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mentions h3 {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.mentions span {
+    color:var(--fond-pur);
+}
+
+/* CVG */
+
+.conditions {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 890px;
+    padding: 40px 24px;
+    gap: 32px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.articles h2 {
+    color: var(--accent);
+}
+
+.articles span {
+    color: var(--fond-pur);
+}
+
 /* Composants */
 
 .btn {
@@ -808,6 +862,10 @@ tbody tr:hover {
     .confirmation-reservation {
         margin: 24px 16px;
         padding: 24px;
+    }
+
+    .page-texte {
+        flex-direction: column;
     }
 }
 

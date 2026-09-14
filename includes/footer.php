@@ -32,11 +32,11 @@
         </div>
 
             <div class="footer-legal">
-                <p>© <?= date('Y') ?> Aquarium Les Jardins de Nérée</p>
+                <p>© <?= date('Y') ?> Aquarium Les Jardins de Nérée <br> Site fictif réalisé dans le cadre d'une formation — aucune réservation ni transaction réelle.</p>
                 <ul>
-                    <li><a href="#">CGV</a></li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="./accessibilite.php">Accessibilité</a></li>
+                    <li><a href="/cvg.php">CGV</a></li>
+                    <li><a href="/mentions-legales.php">Mentions légales</a></li>
+                    <li><a href="/accessibilite.php">Accessibilité</a></li>
                     <?php if (Auth::estConnecte()): ?>
                         <li><a href="/admin/index.php">Mon espace</a></li>
                         <li><a href="/deconnexion.php">Se déconnecter</a></li>
