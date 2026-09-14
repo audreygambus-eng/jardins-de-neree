@@ -73,21 +73,27 @@ require __DIR__ . '/includes/header.php';
             <div class="validation">
                 <section class="creneaux">
                     <h2>Choisissez votre créneau</h2>
-                    <?php foreach ($parJour as $jour => $creneauxDuJour): ?>
-                        <section class="jour">
-                            <h3><?= Dates::enFrancais($jour) ?></h3>
-                            <?php foreach ($creneauxDuJour as $creneau): ?>
-                                <?php $complet = $creneau['places_visite'] <= 0; ?>
-                                <label class="creneau <?= $complet ? 'creneau--complet' : '' ?>">
-                                    <input type="radio" name="creneau_id" value="<?= $creneau['id'] ?>"
-                                    <?= (int) ($ancien['creneau_id'] ?? 0) === (int) $creneau['id'] ? 'checked' : '' ?>
-                                    <?= $complet ? 'disabled' : '' ?>>
-                                    <span class="creneau-heure"><?= date('H\hi', strtotime($creneau['date_heure'])) ?></span>
-                                    <span class="creneau-places"><?= $creneau['places_visite'] ?> places</span>
-                                    <span class="creneau-casques"><?= $creneau['places_vr'] ?> casques</span>
-                                </label>
-                            <?php endforeach; ?>
-                        </section>
+
+                    <?php $premier = true; ?>
+                        <?php foreach ($parJour as $jour => $creneauxDuJour): ?>
+                            <details class="jour" <?= $premier ? 'open' : '' ?>>
+                                <summary><?= Dates::enFrancais($jour) ?></summary>
+
+                                <div class="jour-grille">
+                                    <?php foreach ($creneauxDuJour as $creneau): ?>
+                                        <?php $complet = $creneau['places_visite'] <= 0; ?>
+                                        <label class="creneau <?= $complet ? 'creneau--complet' : '' ?>">
+                                            <input type="radio" name="creneau_id" value="<?= $creneau['id'] ?>"
+                                                <?= (int) ($ancien['creneau_id'] ?? 0) === (int) $creneau['id'] ? 'checked' : '' ?>
+                                                <?= $complet ? 'disabled' : '' ?>>
+                                            <span class="creneau-heure"><?= date('H\hi', strtotime($creneau['date_heure'])) ?></span>
+                                            <span class="creneau-places"><?= $creneau['places_visite'] ?> places</span>
+                                            <span class="creneau-casques"><?= $creneau['places_vr'] ?> casques</span>
+                                        </label>
+                                    <?php endforeach; ?>
+                                </div>
+                            </details>
+                        <?php $premier = false; ?>
                     <?php endforeach; ?>
                 </section>
                 <section class="coordonnees">

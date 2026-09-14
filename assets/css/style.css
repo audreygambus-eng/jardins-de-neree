@@ -482,26 +482,49 @@ footer h3 {
 }
 
 .jour {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
+    padding-top: 16px;
 }
 
-.jour h3 {
-    width: 100%;
+.jour summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px 0;
+
+}
+
+.jour-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 8px;
 }
 
 .creneau {
-    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 14px;
+    border: 1px solid var(--texte-attenue);
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .creneau-heure {
-    padding-right: 15px;
+    font-weight: 600;
+    padding-right: 0;
 }
 
-.creneau-places {
-    padding-right: 15px;
+.creneau-places,
+.creneau-casques {
+    padding-right: 0;
+    font-size: 13px;
+    color: var(--texte-attenue);
+}
+
+.creneau--complet {
+    opacity: 0.45;
+    cursor: not-allowed;
 }
 
 .coordonnees {
@@ -773,6 +796,11 @@ tbody tr:hover {
     width: 100%;
     height: 200px;
     }
+
+    .jour-grille {
+    grid-template-columns: 1fr;
+    }
+
 }
 
 @media print {
