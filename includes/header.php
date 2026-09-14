@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?= htmlspecialchars($description ?? 'Aquarium Les Jardins de Nérée à Néréapolis : plus de 3 000 animaux, 40 bassins et une immersion VR à 360°.') ?>" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Lemon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title><?= isset($titre) ? htmlspecialchars($titre) . ' — ' : '' ?>Les Jardins de Nérée</title>
@@ -10,7 +10,6 @@
 
 <body>
     <header>
-        <main>
             <nav class="conteneur" aria-label="Navigation principale">
             <?php $page = basename($_SERVER['SCRIPT_NAME']); ?>
             <?php $liens = [
@@ -20,7 +19,7 @@
                 ];?>
                 <a href="/index.php">
                     <div class="marque">
-                        <img src="/assets/img/logo.jpg" class="logo" alt="jeton aux couleurs de l'aquarium, bleu et blanc, avec un poisson au premier plan">
+                        <img src="/assets/img/logo.jpg" class="logo" width="128" height="128" alt="jeton aux couleurs de l'aquarium, bleu et blanc, avec un poisson au premier plan">
                         <div class="marque-texte">
                             <span class="marque-nom">Les Jardins de Nérée</span>
                             <span class="marque-baseline">Une promenade dans les mondes marins</span>

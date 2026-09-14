@@ -10,19 +10,19 @@
             </div>
 
             <section>
-                <h3>Nous trouver</h3>
+                <h2>Nous trouver</h2>
                 <p>Allée de l’Odyssée<br>49 244 Néréapolis</p>
                 <p>Parking gratuit sur place</p>
             </section>
 
             <section>
-                <h3>Nous contacter</h3>
+                <h2>Nous contacter</h2>
                 <p><a href="tel:+33700000000">07 00 00 00 00</a></p>
                 <p><a href="mailto:lesjardinsdeneree@mail.com">lesjardinsdeneree@mail.com</a></p>
             </section>
 
             <section>
-                <h3>Le site</h3>
+                <h2>Le site</h2>
                 <ul>
                     <?php foreach ($liens as $fichier => $libelle): ?>
                         <li><a href="/<?= $fichier ?>"><?= htmlspecialchars($libelle) ?></a></li>
