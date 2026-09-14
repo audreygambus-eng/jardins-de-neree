@@ -63,4 +63,15 @@ class Creneau
         
         return $pdo->query($sql)->fetchAll();
     }
+
+    public static function basculerActif(int $id): void
+    {
+        $pdo = Database::getInstance();
+        $sql = 'UPDATE creneau
+                SET actif = NOT actif
+                WHERE id = :id';
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['id' => $id]);
+    }
 }

@@ -101,4 +101,21 @@ class Reservation
 
         return $stmt->fetchAll();
     }
+
+    public static function findParCreneau(int $creneauId): array
+    {
+        $pdo = Database::getInstance();
+        $sql = 'SELECT r.reference, r.nom, r.email,
+                        COALESCE(SUM(rt.quantite), 0) AS nb_billets
+                FROM reservation r
+                LEFT JOIN reservation_tarif rt ON rt.reservation_id = r.id
+                WHERE r.creneau_id = :creneau_id
+                GROUP BY r.id
+                ORDER BY r.date_reservation';
+        
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['creneau_id' => $creneauId]);
+
+        return $stmt->fetchAll();
+    }
 }
