@@ -25,7 +25,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="generalites">
                     <h1>Informations pratiques</h1>
                     <p>Notre aquarium est ouvert  tous les jours de 10h à 18h.</p>
-                    <p><span class="fluent--important-16-regular"aria-hidden="true"></span>La billetterie est accessible jusqu’à 17h.</p>
+                    <p><span class="fluent--important-16-regular" aria-hidden="true"></span>La billetterie est accessible jusqu’à 17h.</p>
                     <span class="sr-only">Important : </span>
                 </div>
                 <div class="specificites">

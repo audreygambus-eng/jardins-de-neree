@@ -118,4 +118,18 @@ class Reservation
 
         return $stmt->fetchAll();
     }
+
+    public static function purger(int $jours = 30): int
+    {
+        $pdo = Database::getInstance();
+        $sql = 'DELETE r
+                FROM reservation r
+                JOIN creneau c ON c.id = r.creneau_id
+                WHERE c.date_heure < DATE_SUB(NOW(), INTERVAL :jours DAY)';
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['jours' => $jours]);
+
+        return $stmt->rowCount();
+    }
 }

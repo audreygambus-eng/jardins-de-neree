@@ -10,19 +10,19 @@
             </div>
 
             <section>
-                <h3>Nous trouver</h3>
+                <h2>Nous trouver</h2>
                 <p>Allée de l’Odyssée<br>49 244 Néréapolis</p>
                 <p>Parking gratuit sur place</p>
             </section>
 
             <section>
-                <h3>Nous contacter</h3>
+                <h2>Nous contacter</h2>
                 <p><a href="tel:+33700000000">07 00 00 00 00</a></p>
                 <p><a href="mailto:lesjardinsdeneree@mail.com">lesjardinsdeneree@mail.com</a></p>
             </section>
 
             <section>
-                <h3>Le site</h3>
+                <h2>Le site</h2>
                 <ul>
                     <?php foreach ($liens as $fichier => $libelle): ?>
                         <li><a href="/<?= $fichier ?>"><?= htmlspecialchars($libelle) ?></a></li>
@@ -32,11 +32,11 @@
         </div>
 
             <div class="footer-legal">
-                <p>© <?= date('Y') ?> Aquarium Les Jardins de Nérée</p>
+                <p>© <?= date('Y') ?> Aquarium Les Jardins de Nérée <br> Site fictif réalisé dans le cadre d'une formation — aucune réservation ni transaction réelle.</p>
                 <ul>
-                    <li><a href="#">CGV</a></li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Accessibilité</a></li>
+                    <li><a href="/cgv.php">CGV</a></li>
+                    <li><a href="/mentions-legales.php">Mentions légales</a></li>
+                    <li><a href="/accessibilite.php">Accessibilité</a></li>
                     <?php if (Auth::estConnecte()): ?>
                         <li><a href="/admin/index.php">Mon espace</a></li>
                         <li><a href="/deconnexion.php">Se déconnecter</a></li>
