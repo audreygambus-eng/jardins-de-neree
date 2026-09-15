@@ -26,13 +26,21 @@
                         </div>
                     </div>
                 </a>
-                <div class="nav-liens">
+
+                <button type="button" class="nav-burger" aria-expanded="false" aria-controls="nav-liens" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-liens" id="nav-liens">
                     <?php foreach ($liens as $fichier => $libelle): ?>
                         <a href="/<?= $fichier ?>" <?= $page === $fichier ? 'aria-current="page"' : '' ?>><?= htmlspecialchars($libelle) ?></a>
                     <?php endforeach; ?>
                     <a href="/billetterie.php" class="nav-btn">Réserver</a>
                 </div>
             </nav>
+            <script src="/assets/js/menu.js" defer></script>
     </header>
     
             
