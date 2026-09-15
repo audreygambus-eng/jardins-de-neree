@@ -306,6 +306,7 @@ La base de données est gérée avec MySQL.
 Un fichier .env.example est fourni afin d'indiquer les variables nécessaires sans exposer les informations sensibles.
 
 Le fichier .env n'est pas versionné.
+En production, le fichier `.env` doit être placé en dehors de la racine web, afin qu'il ne soit pas accessible par une requête HTTP. La classe `Database` cherche le fichier à la racine du projet, puis remonte l'arborescence.
 
 ## Déploiement
 
