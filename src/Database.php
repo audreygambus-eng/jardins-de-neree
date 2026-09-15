@@ -9,7 +9,7 @@ class Database
             return self::$instance;
         }
         $cheminLocal = __DIR__ . '/../.env';
-        $cheminServeur = __DIR__ . '/../../.env';
+        $cheminServeur = __DIR__ . '/../../../.env';
 
         $env = parse_ini_file(file_exists($cheminLocal) ? $cheminLocal : $cheminServeur);
         $dsn = "mysql:host={$env['DB_HOST']};dbname={$env['DB_NAME']};charset=utf8mb4";
