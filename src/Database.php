@@ -8,7 +8,10 @@ class Database
         if (self::$instance !== null) {
             return self::$instance;
         }
-        $env = parse_ini_file(__DIR__ . '/../.env');
+        $cheminLocal = __DIR__ . '/../.env';
+        $cheminServeur = __DIR__ . '/../../.env';
+
+        $env = parse_ini_file(file_exists($cheminLocal) ? $cheminLocal : $cheminServeur);
         $dsn = "mysql:host={$env['DB_HOST']};dbname={$env['DB_NAME']};charset=utf8mb4";
 
         self::$instance = new PDO(
