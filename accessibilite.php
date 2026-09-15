@@ -10,7 +10,7 @@ require __DIR__ . '/includes/header.php';
 
     <section class="themes-accessibilite">
         <h2>Engagement</h2>
-        <p>L'aquarium les Jardins de Nérée s'engage à rendre son site accessible conformément à l’article 47 de la loi n°2005-102 du 11 février 2005. Cette déclaration d’accessibilité s’applique au site Les Jardins de Nérée.</p>
+        <p>L'aquarium les Jardins de Nérée s'engage à rendre son site accessible conformément à l’article 47 de la loi n°2005-102 du 11 février 2005. Cette déclaration d’accessibilité s’applique au site Les Jardins de Nérée, accessible à l'adresse <a href="https://audrey.alwaysdata.net">audrey.alwaysdata.net</a>.</p>
     </section>
 
     <section class="themes-accessibilite">
@@ -42,7 +42,7 @@ require __DIR__ . '/includes/header.php';
 
     <section class="themes-accessibilite">
         <h2>Établissement de cette déclaration d’accessibilité</h2>
-        <p>Cette déclaration a été établie le 14/09/2026.</p>
+        <p>Cette déclaration a été établie le 15/09/2026.</p>
         <h3>Technologies utilisées pour la réalisation du site</h3>
         <ul>
             <li>HTML 5</li>

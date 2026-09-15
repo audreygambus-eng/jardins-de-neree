@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="<?= htmlspecialchars($description ?? 'Aquarium Les Jardins de Nérée à Néréapolis : plus de 3 000 animaux, 40 bassins et une immersion VR à 360°.') ?> width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?= htmlspecialchars($description ?? 'Aquarium Les Jardins de Nérée à Néréapolis : plus de 3 000 animaux, 40 bassins et une immersion VR à 360°.') ?>">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Lemon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title><?= isset($titre) ? htmlspecialchars($titre) . ' — ' : '' ?>Les Jardins de Nérée</title>

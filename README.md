@@ -1,5 +1,7 @@
 # Les Jardins de Nérée
 
+**[Voir le site en ligne](https://audrey.alwaysdata.net)**
+
 Site web fictif de billetterie pour un aquarium, réalisé dans le cadre d'une formation de développeur IA.
 
 ## Présentation
@@ -307,11 +309,7 @@ Le fichier .env n'est pas versionné.
 
 ## Déploiement
 
-Le projet est actuellement en cours de finalisation et sera déployé prochainement sur un hébergement compatible avec PHP et MySQL/MariaDB.
-
-AlwaysData est envisagé pour ce déploiement.
-
-Les informations relatives à l'environnement de production seront complétées lors de la mise en ligne du projet.
+Le projet est déployé sur AlwaysData et accessible à l'adresse [audrey.alwaysdata.net](https://audrey.alwaysdata.net).
 
 ## Informations légales
 

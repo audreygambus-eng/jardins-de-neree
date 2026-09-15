@@ -21,7 +21,7 @@ require __DIR__ . '/includes/header.php';
 
     <section class="mentions">
         <h3>Hébergement</h3>
-        <p>Le site est hébergé par (à compléter)</p>
+        <p>Le site est hébergé par AlwaysData, 91 rue du Faubourg Saint-Honoré, 75008 Paris.</p>
     </section>
 
     <section class="mentions">
