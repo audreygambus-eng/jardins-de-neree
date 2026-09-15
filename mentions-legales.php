@@ -5,7 +5,7 @@ $titre = 'Mentions légales';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main class="texte-mentions">
+<main id="contenu" class="texte-mentions">
     <h1>Mentions légales et politique de confidentialité</h1>
     <h2>Mentions légales</h2>
 

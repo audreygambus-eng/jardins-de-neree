@@ -4,7 +4,7 @@ require_once __DIR__ . '/config.php';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main>
+<main id="contenu">
     <section class="hero">
         <div class="conteneur">
             <p class="hero-pastille">Ouvert tous les jours de 10h à 18h</p>

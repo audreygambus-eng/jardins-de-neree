@@ -18,7 +18,7 @@ foreach ($creneaux as $creneau) {
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main>
+<main id="contenu">
     <section class="billetterie-intro">
         <h1>Billetterie</h1>
         <h2>Comment ça marche ?</h2>

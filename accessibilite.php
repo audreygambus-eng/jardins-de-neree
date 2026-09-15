@@ -5,7 +5,7 @@ $titre = 'Déclaration d\'accessibilité';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main class="page-texte">
+<main id="contenu" class="page-texte">
     <h1>Déclaration d'accessibilité</h1>
 
     <section class="themes-accessibilite">

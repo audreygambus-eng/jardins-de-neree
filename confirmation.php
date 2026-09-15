@@ -19,7 +19,7 @@ if ($reservation === null) {
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main>
+<main id="contenu">
     <div class="confirmation-conteneur">
         <?php if ($reservation === null) : ?>
             <div class="echec-reservation">

@@ -5,7 +5,7 @@ $titre = 'Conditions générales de vente';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main class="conditions">
+<main id="contenu" class="conditions">
     <h1>Conditions générales de vente</h1>
     <section class="articles">
         <h2>Article 1 — Objet</h2>
@@ -26,7 +26,7 @@ require __DIR__ . '/includes/header.php';
 
     <section class="articles">
         <h2>Article 4 — Prix</h2>
-        <p>Le tarif indiqué dans la billetterie pour chaque catégorie représente le prix unitaire du billet. La réservation se fait en ligne et le réglement au guichet de l'aquarium, le jour de la visite.</p>
+        <p>Le tarif indiqué dans la billetterie pour chaque catégorie représente le prix unitaire du billet. La réservation se fait en ligne et le règlement au guichet de l'aquarium, le jour de la visite.</p>
     </section>
 
     <section class="articles">

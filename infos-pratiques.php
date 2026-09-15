@@ -5,7 +5,7 @@ $titre = 'Informations pratiques';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main>
+<main id="contenu">
     <div class="conteneur-infos">
         <section class="page-coordonnees">
                 <div class="localisation">

@@ -5,7 +5,7 @@ $titre = 'Nos animaux';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main>
+<main id="contenu">
     <section class="page-especes">
         <div class="conteneur">
             <h1 class="texte-especes">Nos animaux</h1>

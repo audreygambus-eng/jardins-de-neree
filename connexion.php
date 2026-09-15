@@ -30,7 +30,7 @@ $titre = 'Connexion';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<main>
+<main id="contenu">
     <h1>Connexion</h1>
 
     <?php if ($erreur !== ''): ?>

@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
     <header>
             <nav class="conteneur" aria-label="Navigation principale">
             <?php $page = basename($_SERVER['SCRIPT_NAME']); ?>
