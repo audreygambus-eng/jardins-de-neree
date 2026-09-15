@@ -697,10 +697,6 @@ tbody tr:hover {
     text-underline-offset: 5px;
 }
 
-.themes-accessibilite span {
-    color:var(--fond-pur);
-}
-
 /* Mentions légales */
 
 .texte-mentions {
@@ -726,11 +722,7 @@ tbody tr:hover {
     text-underline-offset: 5px;
 }
 
-.mentions span {
-    color:var(--fond-pur);
-}
-
-/* CVG */
+/* CGV */
 
 .conditions {
     display: flex;
@@ -751,9 +743,6 @@ tbody tr:hover {
     color: var(--accent);
 }
 
-.articles span {
-    color: var(--fond-pur);
-}
 
 /* Composants */
 

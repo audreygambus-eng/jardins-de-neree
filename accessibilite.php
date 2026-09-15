@@ -64,14 +64,14 @@ require __DIR__ . '/includes/header.php';
             <li>Confirmation de réservation</li>
             <li>Accessibilité</li>
             <li>Mentions légales</li>
-            <li>CVG</li>
+            <li>CGV</li>
         </ul>
     </section>
 
     <section class="themes-accessibilite">
         <h2>Retour d’information et contact</h2>
-        <p>En vertu de l’article 11 de la loi de février 2005 : « la personne handicapée a droit à la compensation des conséquences de son handicap, quels que soient l’origine et la nature de sa déficience, son âge ou son mode de vie. »</p> 
-        <p>L'aquarium s’engage à prendre les moyens nécessaires afin de donner accès, dans un délai raisonnable, aux informations et fonctionnalités recherchées par la personne handicapée, que le contenu fasse l’objet d’une dérogation ou non. Toutefois, nous invitons les personnes qui rencontreraient des difficultés à la contacter via l’adresse mail <span>lesjardinsdeneree@mail.com</span> afin qu’une assistance puisse être apportée (alternative accessible, information et contenu donnés sous une autre forme).</p>
+        <p>En vertu de l’article 11 de la loi de février 2005 : « la personne handicapée a droit à la compensation des conséquences de son handicap, quels que soient l’origine et la nature de sa déficience, son âge ou son mode de vie. »</p>
+        <p>L'aquarium s’engage à prendre les moyens nécessaires afin de donner accès, dans un délai raisonnable, aux informations et fonctionnalités recherchées par la personne handicapée, que le contenu fasse l’objet d’une dérogation ou non. Toutefois, nous invitons les personnes qui rencontreraient des difficultés à la contacter via l’adresse mail <strong>lesjardinsdeneree@mail.com</strong> afin qu’une assistance puisse être apportée (alternative accessible, information et contenu donnés sous une autre forme).</p>
     </section>
 
     <section class="themes-accessibilite">
@@ -79,8 +79,8 @@ require __DIR__ . '/includes/header.php';
         <p>Si vous constatez un défaut d’accessibilité vous empêchant d’accéder à un contenu ou une fonctionnalité du site, que vous nous le signalez et que vous ne parvenez pas à obtenir une réponse de notre part, vous êtes en droit de faire parvenir vos doléances ou une demande de saisine au Défenseur des droits.</p>
         <p>Plusieurs moyens sont à votre disposition :</p>
         <ul>
-            <li><a href="https://formulaire.defenseurdesdroits.fr/formulaire_saisine/"><span>Un formulaire de contact</span></a></li>
-            <li><a href="https://www.defenseurdesdroits.fr/carte-des-delegues"><span>La liste du ou des délégués de votre région avec leurs informations de contact direct</span></a></li>
+            <li><a href="https://formulaire.defenseurdesdroits.fr/formulaire_saisine/"><strong>Un formulaire de contact</strong></a></li>
+            <li><a href="https://www.defenseurdesdroits.fr/carte-des-delegues"><strong>La liste du ou des délégués de votre région avec leurs informations de contact direct</strong></a></li>
             <li>Un numéro de téléphone : 09 69 39 00 00</li>
             <li>Une adresse postale (courrier gratuit, sans affranchissement) : Le Défenseur des droits, Libre réponse 71120, 75342 Paris CEDEX 07</li>
         </ul>

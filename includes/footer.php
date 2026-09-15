@@ -34,7 +34,7 @@
             <div class="footer-legal">
                 <p>© <?= date('Y') ?> Aquarium Les Jardins de Nérée <br> Site fictif réalisé dans le cadre d'une formation — aucune réservation ni transaction réelle.</p>
                 <ul>
-                    <li><a href="/cvg.php">CGV</a></li>
+                    <li><a href="/cgv.php">CGV</a></li>
                     <li><a href="/mentions-legales.php">Mentions légales</a></li>
                     <li><a href="/accessibilite.php">Accessibilité</a></li>
                     <?php if (Auth::estConnecte()): ?>

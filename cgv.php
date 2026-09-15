@@ -9,7 +9,7 @@ require __DIR__ . '/includes/header.php';
     <h1>Conditions générales de vente</h1>
     <section class="articles">
         <h2>Article 1 — Objet</h2>
-        <p>Les présentes Conditions générales de vente (CGV) définissent les conditions applicables à la réservation de billets proposés sur le site <span>Les Jardins de Nérée</span>.</p>
+        <p>Les présentes Conditions générales de vente (CGV) définissent les conditions applicables à la réservation de billets proposés sur le site <strong>Les Jardins de Nérée</strong>.</p>
     </section>
 
     <section class="articles">
@@ -26,6 +26,11 @@ require __DIR__ . '/includes/header.php';
 
     <section class="articles">
         <h2>Article 4 — Prix</h2>
+        <p>Le tarif indiqué dans la billetterie pour chaque catégorie représente le prix unitaire du billet. La réservation se fait en ligne et le réglement au guichet de l'aquarium, le jour de la visite.</p>
+    </section>
+
+    <section class="articles">
+        <h2>Article 5 — Validation de la réservation</h2>
         <p>La validation du formulaire entraîne la création d'une réservation simulée et la génération du billet correspondant. Cette réservation n'a aucune valeur contractuelle et ne constitue pas une commande réelle.</p>
     </section>
 

@@ -11,11 +11,11 @@ require __DIR__ . '/includes/header.php';
 
     <section class="mentions">
         <h3>Éditeur du site</h3>
-        <p>Les Jardins de Nérée<p>
+        <p>Les Jardins de Nérée</p>
         <p>Aquarium et espace immersif</p>
         <p>Allée de l’Odyssée</p>
         <p>49 244 Néréapolis</p>
-        <p>Email :<span>lesjardinsdeneree@mail.com</span></p>
+        <p>Email :<strong>lesjardinsdeneree@mail.com</strong></p>
         <p>Les informations présentées sur ce site sont fictives et ont été créées dans le cadre d'un projet de formation.</p>
     </section>
 
@@ -26,7 +26,7 @@ require __DIR__ . '/includes/header.php';
 
     <section class="mentions">
         <h3>Objet du site</h3>
-        <p>Le site présente l'aquarium <span>Les Jardins de Nérée</span> et permet de consulter les différentes offres de visite ainsi que de réaliser une simulation de réservation de billets, avec ou sans expérience de réalité virtuelle. <span>Aucun paiement réel n'est effectué sur ce site</span>.</p>
+        <p>Le site présente l'aquarium <strong>Les Jardins de Nérée</strong> et permet de consulter les différentes offres de visite ainsi que de réaliser une simulation de réservation de billets, avec ou sans expérience de réalité virtuelle. <strong>Aucun paiement réel n'est effectué sur ce site</strong>.</p>
     </section>
 
     <section class="mentions">
@@ -45,7 +45,7 @@ require __DIR__ . '/includes/header.php';
         <h3>Données personnelles</h3>
         <p>Le site collecte certaines données personnelles, notamment le nom et l'adresse e-mail renseignés lors de la simulation de réservation.</p>
         <p>Ces données sont utilisées uniquement pour permettre la génération et l'édition du billet de visite.</p>
-        <p>Pour plus d'informations concernant la collecte, l'utilisation, la conservation et les droits relatifs aux données personnelles, veuillez consulter notre <span>Politique de confidentialité.</span></p>
+        <p>Pour plus d'informations concernant la collecte, l'utilisation, la conservation et les droits relatifs aux données personnelles, veuillez consulter notre <strong>Politique de confidentialité.</strong></p>
     </section>
 
     <section class="mentions">
@@ -58,7 +58,7 @@ require __DIR__ . '/includes/header.php';
 
     <section class="mentions">
         <h3>Données collectées</h3>
-        <p>Dans le cadre de la réservation d'un billet, le site collecte uniquement le nom du visiteur.</p>
+        <p>Dans le cadre de la réservation d'un billet, le site collecte uniquement le nom et l'adresse mail du visiteur.</p>
         <p>Aucune donnée bancaire n'est collectée.</p>
     </section>
 
@@ -74,7 +74,8 @@ require __DIR__ . '/includes/header.php';
 
     <section class="mentions">
         <h3>Conservation des données</h3>
-        <p>Les données sont conservées durant trente jours et supprimées à chaque réinitialisation du calendrier mensuel de test.</p>
+        <p>Les données de réservation sont conservées trente jours après la date de la visite. Au-delà, elles sont supprimées par l'administrateur depuis l'interface de gestion du site.</p>
+        <p>La suppression d'une réservation entraîne automatiquement celle des informations de billetterie associées.</p>
     </section>
 
     <section class="mentions">
@@ -85,7 +86,7 @@ require __DIR__ . '/includes/header.php';
     <section class="mentions">
         <h3>Vos droits</h3>
         <p>Conformément à la réglementation applicable en matière de protection des données personnelles, vous disposez notamment d'un droit d'accès, de rectification et d'effacement de vos données personnelles, ainsi que, dans certaines conditions, d'un droit d'opposition ou de limitation du traitement.</p>
-        <p>Pour exercer vos droits, vous pouvez contacter : <span>lesjardinsdeneree@mail.com</span></p>
+        <p>Pour exercer vos droits, vous pouvez contacter : <strong>lesjardinsdeneree@mail.com</strong></p>
         <p>Vous pouvez également introduire une réclamation auprès de la Commission nationale de l'informatique et des libertés (CNIL).</p>
     </section>
 
