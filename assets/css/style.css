@@ -79,6 +79,25 @@ nav {
     color: var(--accent);
 }
 
+.nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+
+.nav-burger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
 .marque {
     display: flex;
     gap: 25px;
@@ -795,16 +814,28 @@ tbody tr:hover {
 
 @media (max-width: 900px) {
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
         gap: 16px;
     }
 
+    .nav-burger {
+        display: flex;
+    }
+
     .nav-liens {
+        display: none;
+    }
+
+    .nav-liens.ouvert {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
+        width: 100%;
+        padding-bottom: 20px;
     }
+
     .marque-baseline {
         display: none;
     }
@@ -856,6 +887,7 @@ tbody tr:hover {
     .page-texte {
         flex-direction: column;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -880,6 +912,12 @@ tbody tr:hover {
     grid-template-columns: 1fr;
     }
 
+}
+
+@media (max-width: 520px) {
+    .marque-texte {
+        display: none;
+    }
 }
 
 @media print {
