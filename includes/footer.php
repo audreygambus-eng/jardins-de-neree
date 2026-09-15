@@ -32,7 +32,10 @@
         </div>
 
             <div class="footer-legal">
-                <p>© <?= date('Y') ?> Aquarium Les Jardins de Nérée <br> Site fictif réalisé dans le cadre d'une formation — aucune réservation ni transaction réelle.</p>
+                <div>
+                    <p>© <?= date('Y') ?> Aquarium Les Jardins de Nérée</p>
+                    <p class="indication"> Site fictif réalisé dans le cadre d'une formation — aucune réservation ni transaction réelle.</p>
+                </div>
                 <ul>
                     <li><a href="/cgv.php">CGV</a></li>
                     <li><a href="/mentions-legales.php">Mentions légales</a></li>

@@ -248,6 +248,8 @@ Le projet met notamment en œuvre :
 - échappement des données affichées dans le HTML 
 - utilisation de clés étrangères dans la base de données 
 - séparation des données de réservation et des données de référence
+- protection CSRF des formulaires ;
+- comparaison des jetons en temps constant.
 
 Les mots de passe des utilisateurs sont stockés sous forme de hachage et non en clair.
 

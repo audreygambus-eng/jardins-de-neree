@@ -11,7 +11,7 @@ $titre = 'Réservations du créneau';
 require __DIR__ . '/../includes/header.php';
 ?>
 
-<main class="admin-page">
+<main id="contenu" class="admin-page">
     <h1>Réservations du créneau</h1>
 
     <p><a href="/admin/creneaux.php">Retour à la liste des créneaux</a></p>

@@ -43,6 +43,7 @@ require __DIR__ . '/includes/header.php';
     <?php endif; ?>
 
     <form method="post" action="/reserver-traitement.php">
+        <?= Csrf::champ() ?>
     
         <div class="billetterie-conteneur">
             <div class="tarifs">

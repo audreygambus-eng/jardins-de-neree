@@ -32,6 +32,7 @@ require __DIR__ . '/includes/header.php';
             <li>Une hiérarchie de titres respectée</li>
             <li>Des textes alternatifs sur les images</li>
             <li>Un langage adapté à un public francophone</li>
+            <li>Un lien d'évitement pour accéder directement aux zones de contenu</li>
             <li>Des indications destinées aux lecteurs d'écran, invisibles à l'écran</li>
             <li>Les alertes flash avec information pour les lecteurs d'écran de l'apparition d'un message important</li>
             <li>L'indication de l'élément actif pour les lecteurs d'écran</li>
