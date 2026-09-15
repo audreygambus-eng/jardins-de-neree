@@ -14,7 +14,7 @@ $titre = 'Rechercher une réservation';
 require __DIR__ . '/../includes/header.php';
 ?>
 
-<main class="admin-page">
+<main id="contenu" class="admin-page">
     <h1>Rechercher une réservation</h1>
 
     <form method="get" action="/admin/recherche.php" class="form-recherche">

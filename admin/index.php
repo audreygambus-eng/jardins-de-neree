@@ -7,6 +7,7 @@ $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'purger')
     {
+        Csrf::verifier();
         Auth::exigerRole('ROLE_ADMIN');
         $nb = Reservation::purger();
         $_SESSION['message'] = $nb . ' réservation(s) supprimée(s).';
@@ -20,7 +21,7 @@ $titre = 'Tableau de bord';
 require __DIR__ . '/../includes/header.php';
 ?>
 
-<main class="admin-page">
+<main id="contenu" class="admin-page">
     <div class="espace">
         <h1>Tableau de bord</h1>
         <?php if ($message !== ''): ?>
@@ -39,6 +40,7 @@ require __DIR__ . '/../includes/header.php';
             <section class="admin-maintenance">
                 <h2>Maintenance</h2>
                     <form method="post" action="/admin/index.php">
+                        <?= Csrf::champ() ?>
                         <input type="hidden" name="action" value="purger">
                         <button type="submit" class="btn btn-plein"
                         onclick="return confirm('Supprimer les réservations de plus de 30 jours ?')">Purger les anciennes réservations</button>

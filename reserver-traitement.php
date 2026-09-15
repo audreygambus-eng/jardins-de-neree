@@ -9,6 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+Csrf::verifier();
+
 $nom = trim($_POST['nom'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $creneauId = (int) ($_POST['creneau_id'] ?? 0);

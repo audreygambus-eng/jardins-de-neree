@@ -4,6 +4,7 @@ require_once __DIR__ . '/config.php';
 $erreur = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    Csrf::verifier();
     $email = trim($_POST['email'] ?? '');
     $motDePasse = $_POST['mot_de_passe'] ?? '';
 
@@ -38,6 +39,7 @@ require __DIR__ . '/includes/header.php';
     <?php endif; ?>
 
     <form method="post" action="/connexion.php">
+        <?= Csrf::champ() ?>
         <label> E-mail
             <input type="email" name="email" required maxlength="255">
         </label>

@@ -4,6 +4,7 @@ require_once __DIR__ . '/../config.php';
 Auth::exigerRole('ROLE_ADMIN');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    Csrf::verifier();
     $action = $_POST['action'] ?? '';
     $id = (int) ($_POST['id'] ?? 0);
 
@@ -21,7 +22,7 @@ $titre = 'Gestion des créneaux';
 require __DIR__ . '/../includes/header.php';
 ?>
 
-<main class="admin-page">
+<main id="contenu" class="admin-page">
     <h1>Gestion des créneaux</h1>
 
     <table>
@@ -50,6 +51,7 @@ require __DIR__ . '/../includes/header.php';
                     <td><?= $creneau['actif'] ? 'Ouvert' : 'Fermé' ?></td>
                     <td>
                         <form method="post" action="/admin/creneaux.php">
+                            <?= Csrf::champ() ?>
                             <input type="hidden" name="action" value="basculer">
                             <input type="hidden" name="id" value="<?= $creneau['id'] ?>">
                             <button type="submit" class="btn btn-plein">

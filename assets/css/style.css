@@ -149,6 +149,11 @@ footer span {
     gap: 32px;
 }
 
+.indication {
+    font-style: italic;
+    font-size: 15px;
+}
+
 footer h2 {
     color: var(--accent);
     font-size: 16px;
@@ -913,6 +918,16 @@ tbody tr:hover {
     .footer-colonnes {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+
+    .footer-legal {
+    flex-direction: column;
+    gap: 16px;
+    }
+
+    .footer-legal ul {
+        flex-wrap: wrap;
+        gap: 16px;
     }
 
     .tarif {
